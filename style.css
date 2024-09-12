@@ -1,18 +1,16 @@
-* CSS styles for the SuperCars Online Shopping page */
+/* CSS styles for the SuperCars Online Shopping page */
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-}
-body .p{
-    font-family: Arial, sans-serif;
-    background-color: #0b287028;
-    font-weight: bolder;
+    margin: 0;
+    padding: 0;
 }
 
+/* Header Styling */
 header {
-    background-color:rgb(59, 54, 54);
-    padding: 2px;
+    background-color: rgb(59, 54, 54);
+    padding: 10px;
     text-align: center;
 }
 
@@ -25,16 +23,19 @@ header {
 .logo {
     display: inline-block;
     vertical-align: middle;
+    max-height: 60px;
 }
 
-welcome-message {
+.welcome-message {
     display: inline-block;
     vertical-align: middle;
     margin-left: 10px;
-    font-weight: 400;
+    font-weight: 600;
+    font-size: 20px;
+    color: #09bbbbfe;
 }
 
-
+/* Navigation Links */
 .nav-links {
     list-style: none;
     margin: 0;
@@ -49,31 +50,38 @@ welcome-message {
 .nav-links a {
     color: #fff;
     text-decoration: none;
+    font-weight: 600;
 }
 
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
 main {
+    padding: 20px;
     display: flex;
     justify-content: center;
-    padding: 20px;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 20px;
 }
 
 .product {
-    background-color: #fff;
+    background-color: #add;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid  #b8c2be;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product:hover {
-    background-color: #b6bab086;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .product img {
@@ -85,7 +93,7 @@ main {
 }
 
 .product img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .buy-btn {
@@ -96,140 +104,166 @@ main {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 10px; /* added border-radius to make the button have rounded edges */
+    border-radius: 5px;
 }
 
 .buy-btn:hover {
-    background-color: #247f57;
+    background-color: #0056b3;
 }
 
-
-
+/* Form Styling */
 form {
     max-width: 500px;
-    margin: 0 auto;
-    padding: 3px;
-    background-color:none;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
     border: 1px solid #ddd;
-    border-radius: 0.5px;
-    box-shadow: 0 0 10px rgba(195, 201, 201, 0.42);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-    margin-bottom: 1px;
+    margin-bottom: 15px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .form-group input {
     width: 100%;
     height: 40px;
     padding: 10px;
-    border: white#100a0a;
-    border-radius: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 .form-group input:focus {
-    border-color: #aaa;
+    border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 button[type="submit"] {
     background-color: #007bff;
     color: #fff;
-    padding: 10px 10px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-    background-color: #66a763;
+    background-color: #0056b3;
 }
 
-footer{
-    background-color:aliceblue;
-    position:unset;
+/* Footer Styling */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-top: 1px solid #ddd;
 }
-.footerContainer{
-    width: 100%;
-    padding: -4px -5px -5px ;
+
+.footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-.socialIcons{
+
+.socialIcons {
     display: flex;
     justify-content: center;
 }
-.socialIcons a{
+
+.socialIcons a {
     text-decoration: none;
-    padding:  10px;
+    padding: 10px;
     background-color: rgb(157, 37, 37);
     margin: 10px;
     border-radius: 50%;
+    transition: background-color 0.3s ease;
 }
-.socialIcons a i{
+
+.socialIcons a i {
     font-size: 2em;
-    color: black;
-    opacity: 0,9;
+    color: #fff;
 }
-/* Hover affect on social media icon */
-.socialIcons a:hover{
+
+.socialIcons a:hover {
     background-color: #23b79f;
-    transition: 0.5s;
 }
-.socialIcons a:hover i{
-    color: white;
-    transition: 0.5s;
+
+.socialIcons a:hover i {
+    color: #fff;
 }
-.footerNav{
+
+/* Footer Navigation */
+.footerNav {
     margin: 30px 0;
 }
-.footerNav ul{
-    display: flex;
-    justify-content: left;
-    list-style-type: none;
-}
-.footerNav ul li a{
-    color:rgb(36, 16, 16);
-    margin: 20px;
-    text-decoration: none;
-    font-size: 1.3em;
-    opacity: 0.7;
-    transition: 0.5s;
 
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
 }
-.footerNav ul li a:hover{
+
+.footerNav ul li {
+    margin: 0 10px;
+}
+
+.footerNav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footerNav ul li a:hover {
     opacity: 1;
 }
-.footerBottom{
-    background-color:black;
-    padding: 5px;
+
+/* Footer Bottom */
+.footerBottom {
+    background-color: #333;
+    padding: 10px;
     text-align: center;
 }
-.footerBottom p{
-    color: rgb(170, 122, 122);
+
+.footerBottom p {
+    color: #fff;
 }
-.designer{
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin: 5px 5px;
+
+.designer {
+    font-weight: bold;
+    color: #007bff;
 }
-@media (max-width: 4px){
-    .footerNav ul{
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
         flex-direction: column;
-        color:#100a0a
-    } 
-    .footerNav ul li{
-        width:100%;
-        text-align: center;
-        margin: 10px;
+        align-items: flex-start;
     }
-    .socialIcons a{
-        padding: 8px;
-        margin: 4px;
+
+    .welcome-message {
+        margin-top: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 }
